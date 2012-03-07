@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="api.macro('kotti:templates/view/master.pt')">
+
+  <head tal:omit-tag="" metal:fill-slot="head-more">
+    <link rel="stylesheet" href="${request.static_url('kotti_etherpad:static/style.css')}" type="text/css" />
+    <script src="${request.static_url('kotti_etherpad:static/etherpad.js')}" type="text/javascript"></script>
+    <more tal:omit-tag="" metal:define-slot="head"></more>
+  </head>
+
+  <etherpad metal:fill-slot="content" class="etherpad-view content">
+
+    <h1>${api.context.title}</h1>
+    <p class="description">
+      ${api.context.description}
+    </p>
+
+    <div id="etherpad"></div>
+    <div tal:content="host">SETTINGS</div>
+    <script type="text/javascript">
+      $('#etherpad').pad({
+        'host'              : '${host}',
+        'baseUrl'           : '${baseUrl}',
+        'showControls'      : '${showControls}',
+        'showChat'          : '${showChat}',
+        'showLineNumbers'   : '${showLineNumbers}',
+        'userName'          : '${userName}',
+        'useMonospaceFont'  : '${useMonospaceFont}',
+        'noColors'          : '${noColors}',
+        'hideQRCode'        : '${hideQRCode}',
+        'width'             : '${width}',
+        'height'            : '${height}',
+        'border'            : '${border}',
+        'borderStyle'       : '${borderStyle}'
+        },
+        {'padId':'${pad_room}'});
+    </script>
+
+
+
+
+  </etherpad>
+</html>

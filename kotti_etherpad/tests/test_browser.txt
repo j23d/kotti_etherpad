@@ -1,0 +1,48 @@
+kotti_etherpad browser tests
+============================
+
+Setup and Login
+---------------
+
+  >>> from kotti import tests
+  >>> tools = tests.setUpFunctional(
+  ...     **{'kotti.configurators': 'kotti_etherpad.kotti_configure'})
+  >>> browser = tools['Browser']()
+  >>> ctrl = browser.getControl
+
+  >>> browser.open(tests.BASE_URL + '/@@login')
+  >>> "Log in" in browser.contents
+  True
+  >>> ctrl("Username or email").value = "admin"
+  >>> ctrl("Password").value = "secret"
+  >>> ctrl(name="submit").click()
+  >>> "Welcome, Administrator" in browser.contents
+  True
+
+Add a etherpad
+--------------
+
+  >>> browser.open(tests.BASE_URL + '/@@add_etherpad')
+  >>> ctrl("Title").value = "New Etherpad"
+  >>> ctrl("Description").value = "This is the etherpad"
+  >>> ctrl("Pad Room").value = "hello"
+  >>> ctrl("Default User Name").value = "John Doe"
+  >>> ctrl("Server Url").value = "localhost"
+  >>> ctrl("Server Port").value = "1234"
+  >>> ctrl("Width").value = "100%"
+  >>> ctrl("Height").value = "800px"
+  >>> ctrl(name="border").value = "0"
+  >>> ctrl("Border Style").value = "solid"
+  >>> ctrl("save").click()
+  >>> browser.url == tests.BASE_URL + '/new-etherpad/@@edit'
+  True
+  >>> "Successfully added item" in browser.contents
+  True
+
+
+View etherpad
+-------------
+
+  >>> browser.open(tests.BASE_URL + '/new-etherpad/')
+  >>> "This is the etherpad" in browser.contents
+  True
