@@ -25,14 +25,14 @@ Add a etherpad
   >>> browser.open(tests.BASE_URL + '/@@add_etherpad')
   >>> ctrl("Title").value = "New Etherpad"
   >>> ctrl("Description").value = "This is the etherpad"
-  >>> ctrl("Pad Room").value = "hello"
-  >>> ctrl("Default User Name").value = "John Doe"
-  >>> ctrl("Server Url").value = "localhost"
-  >>> ctrl("Server Port").value = "1234"
+  >>> ctrl("Pad Id").value = "hello"
+  >>> ctrl("Domain").value = "http://localhost"
+  >>> ctrl("Port").value = "1234"
   >>> ctrl("Width").value = "100%"
   >>> ctrl("Height").value = "800px"
   >>> ctrl(name="border").value = "0"
   >>> ctrl("Border Style").value = "solid"
+  >>> ctrl("Default User Name").value = "John Doe"
   >>> ctrl("save").click()
   >>> browser.url == tests.BASE_URL + '/new-etherpad/@@edit'
   True
@@ -45,4 +45,32 @@ View etherpad
 
   >>> browser.open(tests.BASE_URL + '/new-etherpad/')
   >>> "This is the etherpad" in browser.contents
+  True
+  >>> "'host': 'http://localhost:1234'" in browser.contents
+  True
+  >>> "'baseUrl': '/p/'" in browser.contents
+  True
+  >>> "'showControls': true" in browser.contents
+  True
+  >>> "'showChat': true" in browser.contents
+  True
+  >>> "'showLineNumbers': true" in browser.contents
+  True
+  >>> "'userName': 'John Doe'" in browser.contents
+  True
+  >>> "'useMonospaceFont': true" in browser.contents
+  True
+  >>> "'noColors': false" in browser.contents
+  True
+  >>> "'hideQRCode': false" in browser.contents
+  True
+  >>> "'width': '100%'" in browser.contents
+  True
+  >>> "'height': '800px'" in browser.contents
+  True
+  >>> "'border': '0'" in browser.contents
+  True
+  >>> "'borderStyle': 'solid'" in browser.contents
+  True
+  >>> "'padId': 'hello'" in browser.contents
   True

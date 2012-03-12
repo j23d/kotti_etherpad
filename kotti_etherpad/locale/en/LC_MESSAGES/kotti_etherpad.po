@@ -1,0 +1,71 @@
+# English translations for kotti_etherpad.
+# Copyright (C) 2012 ORGANIZATION
+# This file is distributed under the same license as the kotti_etherpad
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kotti_etherpad 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-03-12 12:49+0100\n"
+"PO-Revision-Date: 2012-03-09 13:04+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: kotti_etherpad/resources.py:21 kotti_etherpad/templates/protocol_widget.pt:8
+msgid "Etherpad"
+msgstr "Etherpad"
+
+#: kotti_etherpad/views.py:32
+msgid "Domain"
+msgstr "Domain"
+
+#: kotti_etherpad/views.py:33
+msgid "The domain of the server."
+msgstr "The domain of the server."
+
+#: kotti_etherpad/views.py:35
+msgid "This is not a valid domain."
+msgstr "This is not a valid domain."
+
+#: kotti_etherpad/views.py:40
+msgid "Port"
+msgstr "Port"
+
+#: kotti_etherpad/views.py:41
+msgid "Port of the server. Defaults to 80."
+msgstr "Port of the server. Defaults to 80."
+
+#: kotti_etherpad/views.py:46
+msgid "Show controls"
+msgstr "Show controls"
+
+#: kotti_etherpad/views.py:47
+msgid "Decide if you want to show the controls."
+msgstr "Decide if you want to show the controls."
+
+#: kotti_etherpad/views.py:52 kotti_etherpad/views.py:58
+msgid "Show chat"
+msgstr "Show chat"
+
+#: kotti_etherpad/views.py:53 kotti_etherpad/views.py:59
+msgid "Show chat window in the right column."
+msgstr "Show chat window in the right column."
+
+#: kotti_etherpad/templates/protocol_widget.pt:5
+msgid "Etherpads"
+msgstr "Etherpads"
+
+#: kotti_etherpad/templates/protocol_widget.pt:9
+msgid "Protocol"
+msgstr "Protocol"
+
+#: kotti_etherpad/templates/protocol_widget.pt:17
+msgid "Timeslider"
+msgstr "Timeslider"

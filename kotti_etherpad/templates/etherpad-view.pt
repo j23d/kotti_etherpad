@@ -21,25 +21,22 @@
     <div tal:content="host">SETTINGS</div>
     <script type="text/javascript">
       $('#etherpad').pad({
-        'host'              : '${host}',
-        'baseUrl'           : '${baseUrl}',
-        'showControls'      : '${showControls}',
-        'showChat'          : '${showChat}',
-        'showLineNumbers'   : '${showLineNumbers}',
-        'userName'          : '${userName}',
-        'useMonospaceFont'  : '${useMonospaceFont}',
-        'noColors'          : '${noColors}',
-        'hideQRCode'        : '${hideQRCode}',
-        'width'             : '${width}',
-        'height'            : '${height}',
-        'border'            : '${border}',
-        'borderStyle'       : '${borderStyle}'
+        'host': '${host}',
+        'baseUrl': '${base_url}',
+        'showControls': ${show_controls},
+        'showChat': ${show_chat},
+        'showLineNumbers': ${show_line_numbers},
+        'userName': '${user_name}',
+        'useMonospaceFont': ${use_monospace_font},
+        'noColors': ${no_colors},
+        'hideQRCode': ${hide_QR_code},
+        'width': '${width}',
+        'height': '${height}',
+        'border': '${border}',
+        'borderStyle': '${border_style}'
         },
-        {'padId':'${pad_room}'});
+        {'padId': '${pad_id}'});
     </script>
-
-
-
 
   </etherpad>
 </html>

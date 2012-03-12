@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal">
+  <h3 i18n:translate="">Etherpads</h3>
+  <table>
+    <tr>
+      <th i18n:translate="">Etherpad</th>
+      <th i18n:translate="">Protocol</th>
+    </tr>
+    <tal:pads tal:repeat="pad pads">
+      <tr>
+        <td>
+          <a tal:attributes="href string:${pad.url}" tal:content="pad.title">Pad title</a>
+        </td>
+        <td>
+          <a tal:attributes="href string:${pad.url_ts}" i18n:translate="">Timeslider</a>
+        </td>
+      </tr>
+    </tal:pads>
+  </table>
+</html>

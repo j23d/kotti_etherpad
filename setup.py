@@ -24,4 +24,9 @@ setup(name='kotti_etherpad',
       entry_points="""
       # -*- Entry points: -*-
       """,
+      message_extractors={'kotti_etherpad': [
+            ('**.py', 'lingua_python', None),
+            ('**.zcml', 'lingua_xml', None),
+            ('**.pt', 'lingua_xml', None),
+            ]},
       )
