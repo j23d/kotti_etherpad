@@ -1,0 +1,12 @@
+kotti_etherpad.egg-info/
+bin/
+build/
+dist/
+eggs/
+include/
+lib/
+local
+.coverage
+*.pyc
+*~
+*.swp

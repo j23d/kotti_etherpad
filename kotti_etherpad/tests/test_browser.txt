@@ -34,7 +34,7 @@ Add a etherpad
   >>> ctrl("Border Style").value = "solid"
   >>> ctrl("Default User Name").value = "John Doe"
   >>> ctrl("save").click()
-  >>> browser.url == tests.BASE_URL + '/new-etherpad/@@edit'
+  >>> browser.url == tests.BASE_URL + '/new-etherpad/'
   True
   >>> "Successfully added item" in browser.contents
   True
