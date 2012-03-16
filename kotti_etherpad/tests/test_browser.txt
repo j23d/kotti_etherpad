@@ -74,3 +74,16 @@ View etherpad
   True
   >>> "'padId': 'hello'" in browser.contents
   True
+
+
+Edit etherpad
+-------------
+
+  >>> browser.open(tests.BASE_URL + '/new-etherpad/@@edit')
+  >>> ctrl("Description").value = "This is the etherpad edited"
+  >>> ctrl("save").click()
+  >>> browser.url == tests.BASE_URL + '/new-etherpad/'
+  True
+  >>> "This is the etherpad edited" in browser.contents
+  True
+  
