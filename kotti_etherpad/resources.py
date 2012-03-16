@@ -1,13 +1,10 @@
 from sqlalchemy import (
-    Table,
     Column,
     ForeignKey,
     Integer,
     String,
     Boolean,
 )
-from sqlalchemy.orm import mapper
-from kotti import metadata
 from kotti.resources import Content
 from kotti.util import _
 
@@ -16,6 +13,22 @@ class Etherpad(Content):
     """This type contains all information wich pad is to displayed
        from an etherpad server and how to display it.
     """
+    id = Column(Integer, ForeignKey('contents.id'), primary_key=True)
+    pad_id = Column('pad_id', String())
+    server_domain = Column('server_domain', String())
+    server_port = Column('server_port', Integer())
+    default_user_name = Column('default_user_name', String())
+    show_controls = Column('show_controls', Boolean())
+    show_chat = Column('show_chat', Boolean())
+    show_line_numbers = Column('show_line_numbers', Boolean())
+    use_monospace_font = Column(Boolean())
+    no_colors = Column('no_colors', Boolean())
+    hide_QR_code = Column('hide_QR_code', Boolean())
+    width = Column('width', String())
+    height = Column('height', String())
+    border = Column('border', Integer())
+    border_style = Column('border_style', String())
+
     type_info = Content.type_info.copy(
         name=u'Etherpad',
         title=_(u'Etherpad'),
@@ -49,24 +62,3 @@ class Etherpad(Content):
         if int(self.server_port) != '80':
             host = "%s:%s" % (host, self.server_port)
         return host
-
-
-etherpad = Table('etherpad', metadata,
-    Column('id', Integer, ForeignKey('contents.id'), primary_key=True),
-    Column('pad_id', String()),
-    Column('server_domain', String()),
-    Column('server_port', Integer()),
-    Column('default_user_name', String()),
-    Column('show_controls', Boolean()),
-    Column('show_chat', Boolean()),
-    Column('show_line_numbers', Boolean()),
-    Column('use_monospace_font', Boolean()),
-    Column('no_colors', Boolean()),
-    Column('hide_QR_code', Boolean()),
-    Column('width', String()),
-    Column('height', String()),
-    Column('border', Integer()),
-    Column('border_style', String()),
-)
-
-mapper(Etherpad, etherpad, inherits=Content, polymorphic_identity='etherpad')

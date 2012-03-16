@@ -3,11 +3,13 @@ import sys, os
 
 version = '0.1'
 
+here = os.path.abspath(os.path.dirname(__file__))
+README = open(os.path.join(here, 'README.rst')).read()
+
 setup(name='kotti_etherpad',
       version=version,
       description="Etherpad integration for Kotti",
-      long_description="""\
-""",
+      long_description=README,
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='kotti etherpad',
       author='j23d',
@@ -18,7 +20,7 @@ setup(name='kotti_etherpad',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'Kotti>=0.5.1',
+          'Kotti>=0.6.0b1',
           #'PyEtherpadLite',
       ],
       entry_points="""
