@@ -16,12 +16,6 @@ from kotti_etherpad.resources import Etherpad
 
 
 # matches an IP, localhost or a domain
-expr_url = re.compile(r"^(http|https):\/\/([a-zA-Z0-9\-\.]:[a-zA-Z0-9\-\.])((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])"\
-                      r"\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|"\
-                      r"2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])|"\
-                      r"localhost|[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3})$", re.IGNORECASE)
-
-
 expr_url = re.compile(r"^(http|https):\/\/([a-zA-Z0-9\-\.]*(:[a-zA-Z0-9\-\.]*)?@?)?"\
                       r"((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])"\
                       r"\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|"\
