@@ -6,6 +6,17 @@ version = '0.1'
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 
+
+tests_require = [
+    'WebTest',
+    'mock',
+    'pytest',
+    'pytest-cov',
+    'pytest-xdist',
+    'wsgi_intercept',
+    'zope.testbrowser',
+    ]
+
 setup(name='kotti_etherpad',
       version=version,
       description="Etherpad integration for Kotti",
@@ -21,8 +32,10 @@ setup(name='kotti_etherpad',
       zip_safe=False,
       install_requires=[
           'Kotti>=0.6.0b1',
-          #'PyEtherpadLite',
       ],
+      extras_require={
+          'testing': tests_require,
+          },
       entry_points="""
       # -*- Entry points: -*-
       """,
