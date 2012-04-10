@@ -33,6 +33,7 @@ setup(name='kotti_etherpad',
       install_requires=[
           'Kotti>=0.6.0b1',
       ],
+      tests_require=tests_require,
       extras_require={
           'testing': tests_require,
           },
