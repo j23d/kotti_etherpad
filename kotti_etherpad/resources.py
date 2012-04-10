@@ -14,20 +14,20 @@ class Etherpad(Content):
        from an etherpad server and how to display it.
     """
     id = Column(Integer, ForeignKey('contents.id'), primary_key=True)
-    pad_id = Column('pad_id', String())
-    server_domain = Column('server_domain', String())
+    pad_id = Column('pad_id', String(64))
+    server_domain = Column('server_domain', String(256))
     server_port = Column('server_port', Integer())
-    default_user_name = Column('default_user_name', String())
+    default_user_name = Column('default_user_name', String(64))
     show_controls = Column('show_controls', Boolean())
     show_chat = Column('show_chat', Boolean())
     show_line_numbers = Column('show_line_numbers', Boolean())
     use_monospace_font = Column(Boolean())
     no_colors = Column('no_colors', Boolean())
     hide_QR_code = Column('hide_QR_code', Boolean())
-    width = Column('width', String())
-    height = Column('height', String())
+    width = Column('width', String(16))
+    height = Column('height', String(16))
     border = Column('border', Integer())
-    border_style = Column('border_style', String())
+    border_style = Column('border_style', String(16))
 
     type_info = Content.type_info.copy(
         name=u'Etherpad',
