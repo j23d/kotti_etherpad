@@ -86,4 +86,14 @@ Edit etherpad
   True
   >>> "This is the etherpad edited" in browser.contents
   True
+
+
+Set domain with username and password::
   
+  >>> browser.open(tests.BASE_URL + '/new-etherpad/@@edit')
+  >>> ctrl("Domain").value = "http://fromadmin:withlove@localhost"
+  >>> ctrl("save").click()
+  >>> browser.url == tests.BASE_URL + '/new-etherpad/'
+  True
+  >>> "This is the etherpad edited" in browser.contents
+  True
