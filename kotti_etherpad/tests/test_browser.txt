@@ -32,7 +32,6 @@ Add a etherpad
   >>> ctrl("Height").value = "800px"
   >>> ctrl(name="border").value = "0"
   >>> ctrl("Border Style").value = "solid"
-  >>> ctrl("Default User Name").value = "John Doe"
   >>> ctrl("save").click()
   >>> browser.url == tests.BASE_URL + '/new-etherpad/'
   True
@@ -56,7 +55,7 @@ View etherpad
   True
   >>> "'showLineNumbers': true" in browser.contents
   True
-  >>> "'userName': 'John Doe'" in browser.contents
+  >>> "'userName': 'Administrator'" in browser.contents
   True
   >>> "'useMonospaceFont': true" in browser.contents
   True

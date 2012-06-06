@@ -10,8 +10,9 @@ from kotti.views.util import (
     ensure_view_selector,
     template_api,
 )
-from kotti_etherpad import _
+from kotti.security import get_user
 
+from kotti_etherpad import _
 from kotti_etherpad.resources import Etherpad
 
 
@@ -22,10 +23,10 @@ expr_url = re.compile(r"^(http|https):\/\/([a-zA-Z0-9\-\.]*(:[a-zA-Z0-9\-\.]*)?@
                       r"2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])|"\
                       r"localhost|[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3})$", re.IGNORECASE)
 
+
 # TODO: translations
 class EtherpadSchema(ContentSchema):
     pad_id = colander.SchemaNode(colander.String())
-    default_user_name = colander.SchemaNode(colander.String())
     server_domain = colander.SchemaNode(
         colander.String(),
         default="http://",
@@ -98,6 +99,8 @@ def add_etherpad(context, request):
 
 
 def view_etherpad(context, request):
+    user = get_user(request)
+    username = user.title
 
     return {
         'api': template_api(context, request),
@@ -107,7 +110,7 @@ def view_etherpad(context, request):
         'show_controls': context.show_controls and 'true' or 'false',
         'show_chat': context.show_chat and 'true' or 'false',
         'show_line_numbers': context.show_line_numbers and 'true' or 'false',
-        'user_name': context.default_user_name,  # TODO: use logged in name
+        'user_name': username,
         'use_monospace_font': context.use_monospace_font and 'true' or 'false',
         'no_colors': context.no_colors and 'true' or 'false',
         'hide_QR_code': context.hide_QR_code and 'true' or 'false',

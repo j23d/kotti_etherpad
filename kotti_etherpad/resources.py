@@ -17,7 +17,6 @@ class Etherpad(Content):
     pad_id = Column('pad_id', String(64))
     server_domain = Column('server_domain', String(256))
     server_port = Column('server_port', Integer())
-    default_user_name = Column('default_user_name', String(64))
     show_controls = Column('show_controls', Boolean())
     show_chat = Column('show_chat', Boolean())
     show_line_numbers = Column('show_line_numbers', Boolean())
@@ -37,15 +36,14 @@ class Etherpad(Content):
         )
 
     def __init__(self, pad_id='etherpad', server_domain='localhost',
-                 server_port='9001', default_user_name='', show_controls=True,
-                 show_chat=True, show_line_numbers=True, use_monospace_font=True,
+                 server_port='9001', show_controls=True, show_chat=True,
+                 show_line_numbers=True, use_monospace_font=True,
                  no_colors=False, hide_QR_code=False, width='100%', height='800px',
                  border='0', border_style='solid', **kwargs):
         super(Etherpad, self).__init__(**kwargs)
         self.pad_id = pad_id
         self.server_domain = server_domain
         self.server_port = server_port
-        self.default_user_name = default_user_name
         self.show_controls = show_controls
         self.show_chat = show_chat
         self.show_line_numbers = show_line_numbers
