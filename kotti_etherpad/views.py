@@ -100,7 +100,10 @@ def add_etherpad(context, request):
 
 def view_etherpad(context, request):
     user = get_user(request)
-    username = user.title
+    if user is not None:
+        username = user.title
+    else:
+        username = 'Anonymous user'
 
     return {
         'api': template_api(context, request),
