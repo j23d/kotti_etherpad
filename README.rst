@@ -11,7 +11,7 @@ Setting up your etherpad
 ========================
 
 This Addon provides an Content Type to present an etherpad on your Kotti
-site. To set up the content type add ``kotti_navigation.kotti_configure``
+site. To set up the content type add ``kotti_etherpad.kotti_configure``
 to the ``kotti.configurators`` setting in your ini file::
 
     kotti.configurators = kotti_etherpad.kotti_configure

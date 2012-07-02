@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.1a1 - Unreleased
+0.2a1 - Unreleased
 ------------------
 
 - Initial version [j23d]
