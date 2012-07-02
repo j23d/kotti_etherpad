@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_etherpad 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-03-12 12:49+0100\n"
+"POT-Creation-Date: 2012-07-02 15:57+0200\n"
 "PO-Revision-Date: 2012-03-09 13:04+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: kotti_etherpad/resources.py:21 kotti_etherpad/templates/protocol_widget.pt:8
+#: kotti_etherpad/resources.py:33 kotti_etherpad/templates/protocol_widget.pt:8
 msgid "Etherpad"
 msgstr "Etherpad"
 
@@ -69,3 +69,4 @@ msgstr "Protocol"
 #: kotti_etherpad/templates/protocol_widget.pt:17
 msgid "Timeslider"
 msgstr "Timeslider"
+
