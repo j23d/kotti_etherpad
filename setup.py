@@ -1,11 +1,19 @@
 from setuptools import setup, find_packages
-import sys, os
+import os
 
-version = '0.2a1  '
+version = '0.2a1'
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 
+
+def read(*rnames):
+    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
+long_description = (
+    read('README.rst')
+    + '\n' +
+    read('CHANGES.txt'))
 
 tests_require = [
     'WebTest',
@@ -20,8 +28,8 @@ tests_require = [
 setup(name='kotti_etherpad',
       version=version,
       description="Etherpad integration for Kotti",
-      long_description=README,
-      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      long_description=long_description,
+      classifiers=[],
       keywords='kotti etherpad',
       author='j23d',
       author_email='j23d@jusid.de',
