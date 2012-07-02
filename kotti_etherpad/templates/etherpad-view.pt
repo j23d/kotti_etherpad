@@ -18,7 +18,6 @@
     </p>
 
     <div id="etherpad"></div>
-    <div tal:content="host">SETTINGS</div>
     <script type="text/javascript">
       $('#etherpad').pad({
         'host': '${host}',

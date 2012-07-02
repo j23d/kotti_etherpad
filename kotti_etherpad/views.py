@@ -24,7 +24,6 @@ expr_url = re.compile(r"^(http|https):\/\/([a-zA-Z0-9\-\.]*(:[a-zA-Z0-9\-\.]*)?@
                       r"localhost|[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3})$", re.IGNORECASE)
 
 
-# TODO: translations
 class EtherpadSchema(ContentSchema):
     pad_id = colander.SchemaNode(colander.String())
     server_domain = colander.SchemaNode(
