@@ -39,7 +39,7 @@ setup(name='kotti_etherpad',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'Kotti>=0.6.0b1',
+          'Kotti',
       ],
       tests_require=tests_require,
       extras_require={
