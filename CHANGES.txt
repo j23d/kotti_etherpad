@@ -1,8 +1,8 @@
 Change History
 ==============
 
-0.2 - Unreleased
-------------------
+0.2 - 2012-07-12
+----------------
 
 - Update translations. [j23d]
 - Use Integer type for border in schema. [j23d]
