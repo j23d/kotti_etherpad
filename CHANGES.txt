@@ -1,9 +1,10 @@
 Change History
 ==============
 
-0.2a2 - Unreleased
+0.2 - Unreleased
 ------------------
 
+- Set pad_id directly in the settings. [j23d]
 
 
 0.2a1 - 2012-07-02
