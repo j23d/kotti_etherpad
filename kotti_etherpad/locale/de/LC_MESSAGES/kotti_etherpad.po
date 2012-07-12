@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_etherpad 0.1\n"
 "Report-Msgid-Bugs-To: j23d@jusid.de\n"
-"POT-Creation-Date: 2012-07-02 15:57+0200\n"
+"POT-Creation-Date: 2012-07-12 21:37+0200\n"
 "PO-Revision-Date: 2012-03-09 13:04+0100\n"
 "Last-Translator: Marco Scheidhuber <j23d@jusid.de>\n"
 "Language-Team: de <j23d@jusid.de>\n"
@@ -59,6 +59,10 @@ msgstr "Chat anzeigen"
 #: kotti_etherpad/views.py:53 kotti_etherpad/views.py:59
 msgid "Show chat window in the right column."
 msgstr "Chat Fenster in der rechten Spalte des Etherpad anzeigen."
+
+#: kotti_etherpad/views.py:106
+msgid "Anonymous user"
+msgstr "Anonymer Nutzer"
 
 #: kotti_etherpad/templates/protocol_widget.pt:5
 msgid "Etherpads"

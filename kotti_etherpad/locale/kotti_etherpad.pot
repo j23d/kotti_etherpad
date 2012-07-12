@@ -1,15 +1,16 @@
 # Translations template for kotti_etherpad.
 # Copyright (C) 2012 ORGANIZATION
 # This file is distributed under the same license as the kotti_etherpad project.
-# Marco Scheidhuber <j23d@jusid.de>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: kotti_etherpad 0.1\n"
-"Report-Msgid-Bugs-To: j23d@jusid.de\n"
-"POT-Creation-Date: 2012-07-02 15:57+0200\n"
+"Project-Id-Version: kotti_etherpad 0.2dev2\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-07-12 21:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Marco Scheidhuber <j23d@jusid.de>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -18,53 +19,57 @@ msgstr ""
 
 #: kotti_etherpad/resources.py:33 kotti_etherpad/templates/protocol_widget.pt:8
 msgid "Etherpad"
-msgstr "Etherpad"
+msgstr ""
 
 #: kotti_etherpad/views.py:32
 msgid "Domain"
-msgstr "Domain"
+msgstr ""
 
 #: kotti_etherpad/views.py:33
 msgid "The domain of the server."
-msgstr "The domain of the server."
+msgstr ""
 
 #: kotti_etherpad/views.py:35
 msgid "This is not a valid domain."
-msgstr "This is not a valid domain."
+msgstr ""
 
 #: kotti_etherpad/views.py:40
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 #: kotti_etherpad/views.py:41
 msgid "Port of the server. Defaults to 80."
-msgstr "Port of the server. Defaults to 80."
+msgstr ""
 
 #: kotti_etherpad/views.py:46
 msgid "Show controls"
-msgstr "Show controls"
+msgstr ""
 
 #: kotti_etherpad/views.py:47
 msgid "Decide if you want to show the controls."
-msgstr "Decide if you want to show the controls."
+msgstr ""
 
 #: kotti_etherpad/views.py:52 kotti_etherpad/views.py:58
 msgid "Show chat"
-msgstr "Show chat"
+msgstr ""
 
 #: kotti_etherpad/views.py:53 kotti_etherpad/views.py:59
 msgid "Show chat window in the right column."
-msgstr "Show chat window in the right column."
+msgstr ""
+
+#: kotti_etherpad/views.py:106
+msgid "Anonymous user"
+msgstr ""
 
 #: kotti_etherpad/templates/protocol_widget.pt:5
 msgid "Etherpads"
-msgstr "Etherpads"
+msgstr ""
 
 #: kotti_etherpad/templates/protocol_widget.pt:9
 msgid "Protocol"
-msgstr "Protocol"
+msgstr ""
 
 #: kotti_etherpad/templates/protocol_widget.pt:17
 msgid "Timeslider"
-msgstr "Timeslider"
+msgstr ""
 
