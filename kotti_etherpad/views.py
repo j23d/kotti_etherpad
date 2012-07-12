@@ -79,8 +79,9 @@ class EtherpadSchema(ContentSchema):
                 default="800px",
             )
     border = colander.SchemaNode(
-                colander.String(),
-                default="0"
+                colander.Integer(),
+                missing=0,
+                default=0,
             )
     border_style = colander.SchemaNode(
                         colander.String(),

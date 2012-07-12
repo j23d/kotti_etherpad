@@ -4,6 +4,7 @@ Change History
 0.2 - Unreleased
 ------------------
 
+- Use Integer type for border in schema. [j23d]
 - Set pad_id directly in the settings. [j23d]
 
 

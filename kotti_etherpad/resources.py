@@ -36,10 +36,10 @@ class Etherpad(Content):
         )
 
     def __init__(self, pad_id='etherpad', server_domain='localhost',
-                 server_port='9001', show_controls=True, show_chat=True,
+                 server_port=9001, show_controls=True, show_chat=True,
                  show_line_numbers=True, use_monospace_font=True,
                  no_colors=False, hide_QR_code=False, width='100%', height='800px',
-                 border='0', border_style='solid', **kwargs):
+                 border=0, border_style='solid', **kwargs):
         super(Etherpad, self).__init__(**kwargs)
         self.pad_id = pad_id
         self.server_domain = server_domain
