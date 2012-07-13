@@ -24,6 +24,11 @@ expr_url = re.compile(r"^(http|https):\/\/([a-zA-Z0-9\-\.]*(:[a-zA-Z0-9\-\.]*)?@
                       r"localhost|[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3})$", re.IGNORECASE)
 
 
+def sanitize_server_domain(value):
+    sanitized_value = value.rstrip("/")
+    return sanitized_value
+
+
 class EtherpadSchema(ContentSchema):
     pad_id = colander.SchemaNode(colander.String())
     server_domain = colander.SchemaNode(
@@ -31,6 +36,7 @@ class EtherpadSchema(ContentSchema):
         default="http://",
         title=_(u"Domain"),
         description=_(u"The domain of the server."),
+        preparer=sanitize_server_domain,
         validator=colander.Regex(expr_url,
             msg=_(u"This is not a valid domain.")),
     )
@@ -53,11 +59,11 @@ class EtherpadSchema(ContentSchema):
         description=_(u"Show chat window in the right column."),
     )
     show_line_numbers = colander.SchemaNode(
-                            colander.Boolean(),
-                            default=True,
-                            title=_(u"Show chat"),
-                            description=_(u"Show chat window in the right column."),
-                        )
+        colander.Boolean(),
+        default=True,
+        title=_(u"Show line numbers"),
+        description=_(u"Show line numbers."),
+    )
     use_monospace_font = colander.SchemaNode(
                             colander.Boolean(),
                             default=True,
