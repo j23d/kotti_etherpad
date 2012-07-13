@@ -59,11 +59,11 @@ class EtherpadSchema(ContentSchema):
         description=_(u"Show chat window in the right column."),
     )
     show_line_numbers = colander.SchemaNode(
-                            colander.Boolean(),
-                            default=True,
-                            title=_(u"Show chat"),
-                            description=_(u"Show chat window in the right column."),
-                        )
+        colander.Boolean(),
+        default=True,
+        title=_(u"Show line numbers"),
+        description=_(u"Show line numbers."),
+    )
     use_monospace_font = colander.SchemaNode(
                             colander.Boolean(),
                             default=True,
