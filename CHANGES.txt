@@ -4,6 +4,8 @@ Change History
 0.3 - Unreleased
 ----------------
 
+- Added a sanitizer to remove a last "/" character of the server_domain. [t2y]
+- Fixed the title/description typos for line numbers. [t2y]
 
 0.2 - 2012-07-12
 ----------------
