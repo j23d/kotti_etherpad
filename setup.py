@@ -13,6 +13,8 @@ def read(*rnames):
 long_description = (
     read('README.rst')
     + '\n' +
+    read('THANKS.txt')
+    + '\n' +
     read('CHANGES.txt'))
 
 tests_require = [
