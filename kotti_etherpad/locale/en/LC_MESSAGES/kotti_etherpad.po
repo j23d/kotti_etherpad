@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_etherpad 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-07-12 21:37+0200\n"
+"POT-Creation-Date: 2012-07-13 09:39+0200\n"
 "PO-Revision-Date: 2012-03-09 13:04+0100\n"
 "Last-Translator: Marco Scheidhuber <j23d@jusid.de>\n"
 "Language-Team: en <j23d@jusid.de>\n"
@@ -22,43 +22,51 @@ msgstr ""
 msgid "Etherpad"
 msgstr "Etherpad"
 
-#: kotti_etherpad/views.py:32
+#: kotti_etherpad/views.py:37
 msgid "Domain"
 msgstr "Domain"
 
-#: kotti_etherpad/views.py:33
+#: kotti_etherpad/views.py:38
 msgid "The domain of the server."
 msgstr "The domain of the server."
 
-#: kotti_etherpad/views.py:35
+#: kotti_etherpad/views.py:41
 msgid "This is not a valid domain."
 msgstr "This is not a valid domain."
 
-#: kotti_etherpad/views.py:40
+#: kotti_etherpad/views.py:46
 msgid "Port"
 msgstr "Port"
 
-#: kotti_etherpad/views.py:41
+#: kotti_etherpad/views.py:47
 msgid "Port of the server. Defaults to 80."
 msgstr "Port of the server. Defaults to 80."
 
-#: kotti_etherpad/views.py:46
+#: kotti_etherpad/views.py:52
 msgid "Show controls"
 msgstr "Show controls"
 
-#: kotti_etherpad/views.py:47
+#: kotti_etherpad/views.py:53
 msgid "Decide if you want to show the controls."
 msgstr "Decide if you want to show the controls."
 
-#: kotti_etherpad/views.py:52 kotti_etherpad/views.py:58
+#: kotti_etherpad/views.py:58
 msgid "Show chat"
 msgstr "Show chat"
 
-#: kotti_etherpad/views.py:53 kotti_etherpad/views.py:59
+#: kotti_etherpad/views.py:59
 msgid "Show chat window in the right column."
 msgstr "Show chat window in the right column."
 
-#: kotti_etherpad/views.py:106
+#: kotti_etherpad/views.py:64
+msgid "Show line numbers"
+msgstr "Show line numbers"
+
+#: kotti_etherpad/views.py:65
+msgid "Show line numbers in the chat window."
+msgstr "Show line numbers in the chat window."
+
+#: kotti_etherpad/views.py:112
 msgid "Anonymous user"
 msgstr "Anonymous user"
 
@@ -73,4 +81,3 @@ msgstr "Protocol"
 #: kotti_etherpad/templates/protocol_widget.pt:17
 msgid "Timeslider"
 msgstr "Timeslider"
-

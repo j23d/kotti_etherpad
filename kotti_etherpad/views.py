@@ -62,7 +62,7 @@ class EtherpadSchema(ContentSchema):
         colander.Boolean(),
         default=True,
         title=_(u"Show line numbers"),
-        description=_(u"Show line numbers."),
+        description=_(u"Show line numbers in the chat window."),
     )
     use_monospace_font = colander.SchemaNode(
                             colander.Boolean(),
