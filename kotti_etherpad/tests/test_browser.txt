@@ -87,12 +87,31 @@ Edit etherpad
   True
 
 
-Set domain with username and password::
-  
+Set domain with username and password
+-------------------------------------
+
   >>> browser.open(tests.BASE_URL + '/new-etherpad/@@edit')
   >>> ctrl("Domain").value = "http://fromadmin:withlove@localhost"
   >>> ctrl("save").click()
   >>> browser.url == tests.BASE_URL + '/new-etherpad/'
   True
   >>> "This is the etherpad edited" in browser.contents
+  True
+
+
+Check if the username or Anonymous is used for settings
+-------------------------------------------------------
+
+  >>> browser.open(tests.BASE_URL + '/new-etherpad')
+  >>> "'userName': 'Administrator'," in browser.contents
+  True
+
+  >>> browser.open(tests.BASE_URL + '/logout')
+  >>> "You have been logged out." in browser.contents
+  True
+
+  >>> browser.open(tests.BASE_URL + '/new-etherpad')
+  >>> "'userName': 'Administrator'," in browser.contents
+  False
+  >>> "'userName': 'Anonymous user'," in browser.contents
   True
