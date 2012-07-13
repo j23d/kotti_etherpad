@@ -1,0 +1,84 @@
+# Japanese translations for kotti_etherpad.
+# Copyright (C) 2012 ORGANIZATION
+# This file is distributed under the same license as the kotti_etherpad
+# project.
+# Tetsuya Morimoto <tetsuya.morimoto@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kotti_etherpad 0.3dev\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-07-13 09:39+0200\n"
+"PO-Revision-Date: 2012-07-13 13:18+0900\n"
+"Last-Translator: Tetsuya Morimoto <tetsuya.morimoto@gmail.com>\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: kotti_etherpad/resources.py:33 kotti_etherpad/templates/protocol_widget.pt:8
+msgid "Etherpad"
+msgstr "Etherpad"
+
+#: kotti_etherpad/views.py:37
+msgid "Domain"
+msgstr "ドメイン"
+
+#: kotti_etherpad/views.py:38
+msgid "The domain of the server."
+msgstr "サーバーのドメインです。"
+
+#: kotti_etherpad/views.py:41
+msgid "This is not a valid domain."
+msgstr "これは有効なドメインではありません。"
+
+#: kotti_etherpad/views.py:46
+msgid "Port"
+msgstr "ポート番号"
+
+#: kotti_etherpad/views.py:47
+msgid "Port of the server. Defaults to 80."
+msgstr "サーバーのポート番号です。デフォルトは80です。"
+
+#: kotti_etherpad/views.py:52
+msgid "Show controls"
+msgstr "コントロールの表示"
+
+#: kotti_etherpad/views.py:53
+msgid "Decide if you want to show the controls."
+msgstr "コントロールを表示する。"
+
+#: kotti_etherpad/views.py:58
+msgid "Show chat"
+msgstr "チャットの表示"
+
+#: kotti_etherpad/views.py:59
+msgid "Show chat window in the right column."
+msgstr "右カラムにチャット画面を表示する。"
+
+#: kotti_etherpad/views.py:64
+msgid "Show line numbers"
+msgstr "行番号の表示"
+
+#: kotti_etherpad/views.py:65
+msgid "Show line numbers in the chat window."
+msgstr "チャット画面に行番号を表示する。"
+
+#: kotti_etherpad/views.py:112
+msgid "Anonymous user"
+msgstr "匿名ユーザー"
+
+#: kotti_etherpad/templates/protocol_widget.pt:5
+msgid "Etherpads"
+msgstr "Etherpads"
+
+#: kotti_etherpad/templates/protocol_widget.pt:9
+msgid "Protocol"
+msgstr "プロトコル"
+
+#: kotti_etherpad/templates/protocol_widget.pt:17
+msgid "Timeslider"
+msgstr "タイムスライダー"
+
