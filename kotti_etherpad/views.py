@@ -163,3 +163,4 @@ def includeme_view(config):
 def includeme(config):
     includeme_edit(config)
     includeme_view(config)
+    config.add_translation_dirs('kotti_etherpad:locale/')
