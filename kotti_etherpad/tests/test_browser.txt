@@ -25,7 +25,7 @@ Add a etherpad
   >>> browser.open(tests.BASE_URL + '/@@add_etherpad')
   >>> ctrl("Title").value = "New Etherpad"
   >>> ctrl("Description").value = "This is the etherpad"
-  >>> ctrl("Pad Id").value = "hello"
+  >>> ctrl("Pad ID").value = "hello"
   >>> ctrl("Domain").value = "http://localhost"
   >>> ctrl("Port").value = "1234"
   >>> ctrl("Width").value = "100%"
