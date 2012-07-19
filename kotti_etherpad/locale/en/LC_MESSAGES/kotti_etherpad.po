@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_etherpad 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-07-13 09:39+0200\n"
+"POT-Creation-Date: 2012-07-19 13:37+0200\n"
 "PO-Revision-Date: 2012-03-09 13:04+0100\n"
 "Last-Translator: Marco Scheidhuber <j23d@jusid.de>\n"
 "Language-Team: en <j23d@jusid.de>\n"
@@ -22,51 +22,119 @@ msgstr ""
 msgid "Etherpad"
 msgstr "Etherpad"
 
-#: kotti_etherpad/views.py:37
+#: kotti_etherpad/views.py:35
+msgid "Pad ID"
+msgstr "Pad ID"
+
+#: kotti_etherpad/views.py:36
+msgid "The ID to identify your Etherpad."
+msgstr "The ID to identify your Etherpad."
+
+#: kotti_etherpad/views.py:41
 msgid "Domain"
 msgstr "Domain"
 
-#: kotti_etherpad/views.py:38
+#: kotti_etherpad/views.py:42
 msgid "The domain of the server."
 msgstr "The domain of the server."
 
-#: kotti_etherpad/views.py:41
+#: kotti_etherpad/views.py:45
 msgid "This is not a valid domain."
 msgstr "This is not a valid domain."
 
-#: kotti_etherpad/views.py:46
+#: kotti_etherpad/views.py:50
 msgid "Port"
 msgstr "Port"
 
-#: kotti_etherpad/views.py:47
+#: kotti_etherpad/views.py:51
 msgid "Port of the server. Defaults to 80."
 msgstr "Port of the server. Defaults to 80."
 
-#: kotti_etherpad/views.py:52
+#: kotti_etherpad/views.py:56
 msgid "Show controls"
 msgstr "Show controls"
 
-#: kotti_etherpad/views.py:53
+#: kotti_etherpad/views.py:57
 msgid "Decide if you want to show the controls."
 msgstr "Decide if you want to show the controls."
 
-#: kotti_etherpad/views.py:58
+#: kotti_etherpad/views.py:62
 msgid "Show chat"
 msgstr "Show chat"
 
-#: kotti_etherpad/views.py:59
+#: kotti_etherpad/views.py:63
 msgid "Show chat window in the right column."
 msgstr "Show chat window in the right column."
 
-#: kotti_etherpad/views.py:64
+#: kotti_etherpad/views.py:68
 msgid "Show line numbers"
 msgstr "Show line numbers"
 
-#: kotti_etherpad/views.py:65
+#: kotti_etherpad/views.py:69
 msgid "Show line numbers in the chat window."
 msgstr "Show line numbers in the chat window."
 
+#: kotti_etherpad/views.py:74
+msgid "Monospace font"
+msgstr "Monospace font"
+
+#: kotti_etherpad/views.py:75
+msgid "Use Monospaced fonts."
+msgstr "Use Monospaced fonts."
+
+#: kotti_etherpad/views.py:80
+msgid "No colors"
+msgstr "No colors"
+
+#: kotti_etherpad/views.py:81
+msgid "Disable background colors on author text."
+msgstr "Disable background colors on author text."
+
+#: kotti_etherpad/views.py:86
+msgid "Hide QR code"
+msgstr "Hide QR code"
+
+#: kotti_etherpad/views.py:87
+msgid "Hide QR code."
+msgstr "Hide QR code."
+
+#: kotti_etherpad/views.py:92
+msgid "Width"
+msgstr "Width"
+
+#: kotti_etherpad/views.py:93
+msgid "The width of the embedded IFrame."
+msgstr "The width of the embedded IFrame."
+
+#: kotti_etherpad/views.py:98
+msgid "Height"
+msgstr "Height"
+
+#: kotti_etherpad/views.py:99
+msgid "The height of the embedded IFrame."
+msgstr "The height of the embedded IFrame."
+
+#: kotti_etherpad/views.py:105
+msgid "Border"
+msgstr "Border"
+
+#: kotti_etherpad/views.py:106
+msgid "The width of the border (make sure to append px to a numerical value)."
+msgstr "The width of the border (make sure to append px to a numerical value)."
+
 #: kotti_etherpad/views.py:112
+msgid "Border Style"
+msgstr "Border Style"
+
+#: kotti_etherpad/views.py:113
+msgid ""
+"The CSS style of the border [none, dotted, dashed, solid, double, groove,"
+" ridge, inset, outset]"
+msgstr ""
+"The CSS style of the border [none, dotted, dashed, solid, double, groove,"
+" ridge, inset, outset]"
+
+#: kotti_etherpad/views.py:132
 msgid "Anonymous user"
 msgstr "Anonymous user"
 
@@ -81,3 +149,4 @@ msgstr "Protocol"
 #: kotti_etherpad/templates/protocol_widget.pt:17
 msgid "Timeslider"
 msgstr "Timeslider"
+
