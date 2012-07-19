@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_etherpad 0.3dev\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-07-13 09:39+0200\n"
+"POT-Creation-Date: 2012-07-19 10:22+0900\n"
 "PO-Revision-Date: 2012-07-13 13:18+0900\n"
 "Last-Translator: Tetsuya Morimoto <tetsuya.morimoto@gmail.com>\n"
 "Language-Team: ja <LL@li.org>\n"
@@ -22,51 +22,119 @@ msgstr ""
 msgid "Etherpad"
 msgstr "Etherpad"
 
-#: kotti_etherpad/views.py:37
+#: kotti_etherpad/views.py:35
+msgid "Pad ID"
+msgstr "パッド ID"
+
+#: kotti_etherpad/views.py:36
+msgid "The ID to identify your Etherpad."
+msgstr "Etherpad を識別するための ID です。"
+
+#: kotti_etherpad/views.py:41
 msgid "Domain"
 msgstr "ドメイン"
 
-#: kotti_etherpad/views.py:38
+#: kotti_etherpad/views.py:42
 msgid "The domain of the server."
 msgstr "サーバーのドメインです。"
 
-#: kotti_etherpad/views.py:41
+#: kotti_etherpad/views.py:45
 msgid "This is not a valid domain."
 msgstr "これは有効なドメインではありません。"
 
-#: kotti_etherpad/views.py:46
+#: kotti_etherpad/views.py:50
 msgid "Port"
 msgstr "ポート番号"
 
-#: kotti_etherpad/views.py:47
+#: kotti_etherpad/views.py:51
 msgid "Port of the server. Defaults to 80."
 msgstr "サーバーのポート番号です。デフォルトは80です。"
 
-#: kotti_etherpad/views.py:52
+#: kotti_etherpad/views.py:56
 msgid "Show controls"
 msgstr "コントロールの表示"
 
-#: kotti_etherpad/views.py:53
+#: kotti_etherpad/views.py:57
 msgid "Decide if you want to show the controls."
 msgstr "コントロールを表示する。"
 
-#: kotti_etherpad/views.py:58
+#: kotti_etherpad/views.py:62
 msgid "Show chat"
 msgstr "チャットの表示"
 
-#: kotti_etherpad/views.py:59
+#: kotti_etherpad/views.py:63
 msgid "Show chat window in the right column."
 msgstr "右カラムにチャット画面を表示する。"
 
-#: kotti_etherpad/views.py:64
+#: kotti_etherpad/views.py:68
 msgid "Show line numbers"
 msgstr "行番号の表示"
 
-#: kotti_etherpad/views.py:65
+#: kotti_etherpad/views.py:69
 msgid "Show line numbers in the chat window."
 msgstr "チャット画面に行番号を表示する。"
 
+#: kotti_etherpad/views.py:74
+msgid "Monospace font"
+msgstr "Monospace フォント"
+
+#: kotti_etherpad/views.py:75
+msgid "Use Monospaced fonts."
+msgstr "Monospace フォントを使用する。"
+
+#: kotti_etherpad/views.py:80
+msgid "No colors"
+msgstr "カラー表示の無効化"
+
+#: kotti_etherpad/views.py:81
+msgid "Disable background colors on author text."
+msgstr "書き手の背景色表示を無効化する。"
+
+#: kotti_etherpad/views.py:86
+msgid "Hide QR code"
+msgstr "QR コードの非表示"
+
+#: kotti_etherpad/views.py:87
+msgid "Hide QR code."
+msgstr "QR コードを非表示にする。"
+
+#: kotti_etherpad/views.py:92
+msgid "Width"
+msgstr "横幅"
+
+#: kotti_etherpad/views.py:93
+msgid "The width of the embedded IFrame."
+msgstr "埋め込む IFrame の横幅を設定する。"
+
+#: kotti_etherpad/views.py:98
+msgid "Height"
+msgstr "高さ"
+
+#: kotti_etherpad/views.py:99
+msgid "The height of the embedded IFrame."
+msgstr "埋め込む IFrame の高さを設定する。"
+
+#: kotti_etherpad/views.py:105
+msgid "Border"
+msgstr "境界線"
+
+#: kotti_etherpad/views.py:106
+msgid "The width of the border (make sure to append px to a numerical value)."
+msgstr "境界線の横幅を設定する。"
+
 #: kotti_etherpad/views.py:112
+msgid "Border Style"
+msgstr "境界線のスタイル"
+
+#: kotti_etherpad/views.py:113
+msgid ""
+"The CSS style of the border [none, dotted, dashed, solid, double, groove,"
+" ridge, inset, outset]"
+msgstr ""
+"境界線の CSS スタイルを [none, dotted, dashed, solid, double, groove, ridge, "
+"inset, outset] から設定する。"
+
+#: kotti_etherpad/views.py:132
 msgid "Anonymous user"
 msgstr "匿名ユーザー"
 
@@ -81,4 +149,3 @@ msgstr "プロトコル"
 #: kotti_etherpad/templates/protocol_widget.pt:17
 msgid "Timeslider"
 msgstr "タイムスライダー"
-
