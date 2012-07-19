@@ -30,7 +30,11 @@ def sanitize_server_domain(value):
 
 
 class EtherpadSchema(ContentSchema):
-    pad_id = colander.SchemaNode(colander.String())
+    pad_id = colander.SchemaNode(
+        colander.String(),
+        title=_(u"Pad ID"),
+        description=_(u"The ID to identify your Etherpad."),
+    )
     server_domain = colander.SchemaNode(
         colander.String(),
         default="http://",
@@ -65,34 +69,50 @@ class EtherpadSchema(ContentSchema):
         description=_(u"Show line numbers in the chat window."),
     )
     use_monospace_font = colander.SchemaNode(
-                            colander.Boolean(),
-                            default=True,
-                        )
+        colander.Boolean(),
+        default=True,
+        title=_(u"Monospace font"),
+        description=_(u"Use Monospaced fonts."),
+    )
     no_colors = colander.SchemaNode(
-                    colander.Boolean(),
-                    default=False,
-                )
+        colander.Boolean(),
+        default=False,
+        title=_(u"No colors"),
+        description=_(u"Disable background colors on author text."),
+    )
     hide_QR_code = colander.SchemaNode(
-                        colander.Boolean(),
-                        default=False,
-                    )
+        colander.Boolean(),
+        default=False,
+        title=_(u"Hide QR code"),
+        description=_(u"Hide QR code."),
+    )
     width = colander.SchemaNode(
-                colander.String(),
-                default="100%"
-            )
+        colander.String(),
+        default="100%",
+        title=_(u"Width"),
+        description=_(u"The width of the embedded IFrame."),
+    )
     height = colander.SchemaNode(
-                colander.String(),
-                default="800px",
-            )
+        colander.String(),
+        default="800px",
+        title=_(u"Height"),
+        description=_(u"The height of the embedded IFrame."),
+    )
     border = colander.SchemaNode(
-                colander.Integer(),
-                missing=0,
-                default=0,
-            )
+        colander.Integer(),
+        missing=0,
+        default=0,
+        title=_(u"Border"),
+        description=_(u"The width of the border (make sure to append px "\
+                       "to a numerical value)."),
+    )
     border_style = colander.SchemaNode(
-                        colander.String(),
-                        default="solid",
-                   )
+        colander.String(),
+        default="solid",
+        title=_(u"Border Style"),
+        description=_(u"The CSS style of the border [none, dotted, dashed, "\
+                       "solid, double, groove, ridge, inset, outset]"),
+    )
 
 
 @ensure_view_selector
