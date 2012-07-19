@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3 - Unreleased
+0.3 - 2012-07-19
 ----------------
 
 - Added a sanitizer to remove a last "/" character of the server_domain. [t2y]
