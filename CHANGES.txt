@@ -7,7 +7,7 @@ Change History
 - Added a sanitizer to remove a last "/" character of the server_domain. [t2y]
 - Fixed the title/description typos for line numbers. [t2y]
 - Added test to check if the current username is used for the pad. [j23d]
-
+- Activate translation settings and added title/description for all fields. [t2y]
 
 0.2 - 2012-07-12
 ----------------
