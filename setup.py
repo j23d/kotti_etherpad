@@ -44,7 +44,8 @@ setup(name='kotti_etherpad',
       ],
       extras_require={},
       entry_points="""
-      # -*- Entry points: -*-
+      [fanstatic.libraries]
+      kotti_etherpad = kotti_etherpad.fanstatic:library
       """,
       message_extractors={'kotti_etherpad': [
             ('**.py', 'lingua_python', None),

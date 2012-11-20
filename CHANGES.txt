@@ -11,6 +11,7 @@ Change History
   with Kotti<=0.7.x then pin kotti_etherpad to 0.3.
   - Tests are require pytest fixtures from Kotti>=0.8.
   - Use form classes for the form views instead of deprecated generic functions.
+  - Use fanstatic for resources.
 - Use view_config decoration for views.
 
 
