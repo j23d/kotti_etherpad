@@ -1,10 +1,9 @@
-from kotti.testing import UnitTestBase
 from kotti_etherpad.widgets import render_protocol_widget
 
 
-class TestProtocolWidget(UnitTestBase):
+class TestProtocolWidget:
 
-    def test_listing(self):
+    def test_listing(self, db_session):
         from kotti import DBSession
         from kotti.testing import DummyRequest
         from kotti.resources import get_root

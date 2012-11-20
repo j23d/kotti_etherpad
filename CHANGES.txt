@@ -6,6 +6,10 @@ Change History
 
 - Switch licences to BSD derived. [j23d]
 - Use assign slot for widget instead of deprecated rendering. [j23d]
+- Changes for compatibility with Kotti>=0.8. These changes
+  are not backward compatibel. If you want to use kotti_etherpad
+  with Kotti<=0.7.x then pin kotti_etherpad to 0.3.
+  - Tests are require pytest fixtures from Kotti>=0.8.
 
 0.3 - 2012-07-19
 ----------------
