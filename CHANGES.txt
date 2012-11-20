@@ -4,8 +4,8 @@ Change History
 0.4 - Unreleased
 ----------------
 
-- Switch licences to BSD derived.
-
+- Switch licences to BSD derived. [j23d]
+- Use assign slot for widget instead of deprecated rendering. [j23d]
 
 0.3 - 2012-07-19
 ----------------
