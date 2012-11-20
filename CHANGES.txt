@@ -4,6 +4,7 @@ Change History
 0.4 - Unreleased
 ----------------
 
+- Switch licences to BSD derived.
 
 
 0.3 - 2012-07-19
