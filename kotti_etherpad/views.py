@@ -1,5 +1,7 @@
 import re
+
 import colander
+from pyramid.view import view_config
 
 from kotti.views.edit import ContentSchema
 from kotti.views.form import AddFormView
@@ -120,6 +122,10 @@ class EtherpadEditForm(EditFormView):
     schema_factory = EtherpadSchema
 
 
+@view_config(context=Etherpad,
+             name='view',
+             permission='view',
+             renderer='templates/etherpad-view.pt')
 def view_etherpad(context, request):
     user = get_user(request)
     if user is not None:
@@ -164,18 +170,8 @@ def includeme_edit(config):
         )
 
 
-def includeme_view(config):
-    config.add_view(
-        view_etherpad,
-        context=Etherpad,
-        name='view',
-        permission='view',
-        renderer='templates/etherpad-view.pt',
-        )
-
-
 def includeme(config):
     includeme_edit(config)
-    includeme_view(config)
     config.add_static_view('static-kotti_etherpad', 'kotti_etherpad:static')
     config.add_translation_dirs('kotti_etherpad:locale/')
+    config.scan(__name__)
