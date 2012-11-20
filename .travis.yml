@@ -8,8 +8,8 @@ env:
   - KOTTI_TEST_DB_STRING=sqlite://
 install:
   - python setup.py dev
-  - pip install psycopg oursql
+  - pip install psycopg2 oursql
 before_script:
   - psql -c 'create database kotti_testing;' -U postgres
   - mysql -e 'create database kotti_testing;'
-script: py.test
+script: py.test --tb=native --cov=kotti_etherpad --cov-report=term-missing
