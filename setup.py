@@ -17,16 +17,6 @@ long_description = (
     + '\n' +
     read('CHANGES.txt'))
 
-tests_require = [
-    'WebTest',
-    'mock',
-    'pytest',
-    'pytest-cov',
-    'pytest-xdist',
-    'wsgi_intercept',
-    'zope.testbrowser',
-    ]
-
 setup(name='kotti_etherpad',
       version=version,
       description="Etherpad integration into your Kotti site",
@@ -52,10 +42,7 @@ setup(name='kotti_etherpad',
       install_requires=[
           'Kotti',
       ],
-      tests_require=tests_require,
-      extras_require={
-          'testing': tests_require,
-          },
+      extras_require={},
       entry_points="""
       # -*- Entry points: -*-
       """,
