@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.4 - Unreleased
+0.4 - 2012-11-20
 ----------------
 
 - Switch licences to BSD derived. [j23d]
