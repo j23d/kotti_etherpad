@@ -6,7 +6,8 @@ Setup and Login
 
   >>> from kotti import testing
   >>> tools = testing.setUpFunctional(
-  ...     **{'kotti.configurators': 'kotti_etherpad.kotti_configure'})
+  ...     **{'kotti.configurators': 'kotti_etherpad.kotti_configure',
+  ...        'pyramid.includes': 'kotti_etherpad.widgets.include_protocol_widget'})
   >>> browser = tools['Browser']()
   >>> ctrl = browser.getControl
 
@@ -96,6 +97,13 @@ Set domain with username and password
   >>> browser.url == testing.BASE_URL + '/new-etherpad/'
   True
   >>> "This is the etherpad edited" in browser.contents
+  True
+
+
+Check the widget
+----------------
+
+  >>> testing.BASE_URL + '/new-etherpad?timeslider=1' in browser.contents
   True
 
 

@@ -20,6 +20,20 @@ Now you can add a new pad. You can host your own server (have a look to
 the `etherpad documentation`_) or use a free one (choose from a 
 `list of free etherpad servers`_).
 
+Pads widget
+-----------
+
+kotti_etherpad provides a widget, where all pads are listed, which is disabled
+by default. To enable the widget add the following to the ``pyramid.includes``
+setting::
+
+  pyramid.includes = kotti_etherpad.widgets.include_protocol_widget
+
+or(to set the widget on the left instead of the right side)::
+
+  pyramid.includes = kotti_etherpad.widgets.include_protocol_widget_left
+
+
 .. _Find out more about Kotti: http://pypi.python.org/pypi/Kotti
 .. _Find out more about etherpad: https://github.com/Pita/etherpad-lite/
 .. _etherpad documentation: https://github.com/Pita/etherpad-lite/blob/master/README.md

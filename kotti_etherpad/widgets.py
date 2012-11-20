@@ -32,5 +32,5 @@ def include_protocol_widget(config, where='right'):
     assign_slot('render-protocol-widget', where)
 
 
-def include_protocol_widget_left(config):
+def include_protocol_widget_left(config):  # pragma: no cover
     include_protocol_widget(config, 'left')
