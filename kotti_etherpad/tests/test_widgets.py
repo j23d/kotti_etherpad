@@ -1,5 +1,5 @@
 from kotti.testing import UnitTestBase
-from kotti_etherpad.slots import render_protocol_widget
+from kotti_etherpad.widgets import render_protocol_widget
 
 
 class TestProtocolWidget(UnitTestBase):
