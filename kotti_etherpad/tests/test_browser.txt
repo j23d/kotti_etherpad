@@ -4,13 +4,13 @@ kotti_etherpad browser tests
 Setup and Login
 ---------------
 
-  >>> from kotti import tests
-  >>> tools = tests.setUpFunctional(
+  >>> from kotti import testing
+  >>> tools = testing.setUpFunctional(
   ...     **{'kotti.configurators': 'kotti_etherpad.kotti_configure'})
   >>> browser = tools['Browser']()
   >>> ctrl = browser.getControl
 
-  >>> browser.open(tests.BASE_URL + '/@@login')
+  >>> browser.open(testing.BASE_URL + '/@@login')
   >>> "Log in" in browser.contents
   True
   >>> ctrl("Username or email").value = "admin"
@@ -22,7 +22,7 @@ Setup and Login
 Add a etherpad
 --------------
 
-  >>> browser.open(tests.BASE_URL + '/@@add_etherpad')
+  >>> browser.open(testing.BASE_URL + '/@@add_etherpad')
   >>> ctrl("Title").value = "New Etherpad"
   >>> ctrl("Description").value = "This is the etherpad"
   >>> ctrl("Pad ID").value = "hello"
@@ -33,7 +33,7 @@ Add a etherpad
   >>> ctrl(name="border").value = "0"
   >>> ctrl("Border Style").value = "solid"
   >>> ctrl("save").click()
-  >>> browser.url == tests.BASE_URL + '/new-etherpad/'
+  >>> browser.url == testing.BASE_URL + '/new-etherpad/'
   True
   >>> "Successfully added item" in browser.contents
   True
@@ -42,7 +42,7 @@ Add a etherpad
 View etherpad
 -------------
 
-  >>> browser.open(tests.BASE_URL + '/new-etherpad/')
+  >>> browser.open(testing.BASE_URL + '/new-etherpad/')
   >>> "This is the etherpad" in browser.contents
   True
   >>> "'host': 'http://localhost:1234'" in browser.contents
@@ -78,10 +78,10 @@ View etherpad
 Edit etherpad
 -------------
 
-  >>> browser.open(tests.BASE_URL + '/new-etherpad/@@edit')
+  >>> browser.open(testing.BASE_URL + '/new-etherpad/@@edit')
   >>> ctrl("Description").value = "This is the etherpad edited"
   >>> ctrl("save").click()
-  >>> browser.url == tests.BASE_URL + '/new-etherpad/'
+  >>> browser.url == testing.BASE_URL + '/new-etherpad/'
   True
   >>> "This is the etherpad edited" in browser.contents
   True
@@ -90,10 +90,10 @@ Edit etherpad
 Set domain with username and password
 -------------------------------------
 
-  >>> browser.open(tests.BASE_URL + '/new-etherpad/@@edit')
+  >>> browser.open(testing.BASE_URL + '/new-etherpad/@@edit')
   >>> ctrl("Domain").value = "http://fromadmin:withlove@localhost"
   >>> ctrl("save").click()
-  >>> browser.url == tests.BASE_URL + '/new-etherpad/'
+  >>> browser.url == testing.BASE_URL + '/new-etherpad/'
   True
   >>> "This is the etherpad edited" in browser.contents
   True
@@ -102,15 +102,15 @@ Set domain with username and password
 Check if the username or Anonymous is used for settings
 -------------------------------------------------------
 
-  >>> browser.open(tests.BASE_URL + '/new-etherpad')
+  >>> browser.open(testing.BASE_URL + '/new-etherpad')
   >>> "'userName': 'Administrator'," in browser.contents
   True
 
-  >>> browser.open(tests.BASE_URL + '/logout')
+  >>> browser.open(testing.BASE_URL + '/logout')
   >>> "You have been logged out." in browser.contents
   True
 
-  >>> browser.open(tests.BASE_URL + '/new-etherpad')
+  >>> browser.open(testing.BASE_URL + '/new-etherpad')
   >>> "'userName': 'Administrator'," in browser.contents
   False
   >>> "'userName': 'Anonymous user'," in browser.contents

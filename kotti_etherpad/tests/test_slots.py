@@ -1,4 +1,4 @@
-from kotti.tests import UnitTestBase
+from kotti.testing import UnitTestBase
 from kotti_etherpad.slots import render_protocol_widget
 
 
@@ -17,6 +17,7 @@ class TestProtocolWidget(UnitTestBase):
         root = get_root()
         pad = root[u'pad1'] = Etherpad()
         pad2 = root[u'pad2'] = Etherpad()
+        pad2  # pyflakes
         DBSession.flush()
         widget = render_protocol_widget(pad, request)
         self.assert_(u'href="http://example.com/pad1"' in widget)
