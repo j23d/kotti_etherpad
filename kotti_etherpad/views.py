@@ -1,15 +1,10 @@
 import re
 import colander
 
-from kotti.views.edit import (
-    ContentSchema,
-    generic_edit,
-    generic_add,
-)
-from kotti.views.util import (
-    ensure_view_selector,
-    template_api,
-)
+from kotti.views.edit import ContentSchema
+from kotti.views.form import AddFormView
+from kotti.views.form import EditFormView
+from kotti.views.util import template_api
 from kotti.security import get_user
 
 from kotti_etherpad import _
@@ -115,13 +110,14 @@ class EtherpadSchema(ContentSchema):
     )
 
 
-@ensure_view_selector
-def edit_etherpad(context, request):
-    return generic_edit(context, request, EtherpadSchema())
+class EtherpadAddForm(AddFormView):
+    schema_factory = EtherpadSchema
+    add = Etherpad
+    item_type = _(u"Etherpad")
 
 
-def add_etherpad(context, request):
-    return generic_add(context, request, EtherpadSchema(), Etherpad, u'etherpad')
+class EtherpadEditForm(EditFormView):
+    schema_factory = EtherpadSchema
 
 
 def view_etherpad(context, request):
@@ -153,17 +149,17 @@ def view_etherpad(context, request):
 def includeme_edit(config):
 
     config.add_view(
-        edit_etherpad,
-        context=Etherpad,
-        name='edit',
-        permission='edit',
+        EtherpadAddForm,
+        name=Etherpad.type_info.add_view,
+        permission='add',
         renderer='kotti:templates/edit/node.pt',
         )
 
     config.add_view(
-        add_etherpad,
-        name=Etherpad.type_info.add_view,
-        permission='add',
+        EtherpadEditForm,
+        context=Etherpad,
+        name='edit',
+        permission='edit',
         renderer='kotti:templates/edit/node.pt',
         )
 
@@ -177,10 +173,9 @@ def includeme_view(config):
         renderer='templates/etherpad-view.pt',
         )
 
-    config.add_static_view('static-kotti_etherpad', 'kotti_etherpad:static')
-
 
 def includeme(config):
     includeme_edit(config)
     includeme_view(config)
+    config.add_static_view('static-kotti_etherpad', 'kotti_etherpad:static')
     config.add_translation_dirs('kotti_etherpad:locale/')

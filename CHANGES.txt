@@ -10,6 +10,8 @@ Change History
   are not backward compatibel. If you want to use kotti_etherpad
   with Kotti<=0.7.x then pin kotti_etherpad to 0.3.
   - Tests are require pytest fixtures from Kotti>=0.8.
+  - Use form classes for the form views instead of deprecated generic functions.
+
 
 0.3 - 2012-07-19
 ----------------
